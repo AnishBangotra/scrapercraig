@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<style type="text/css">
+    .main{
+      min-height: 100vh;
+      height: 100%;
+    }
+    .footer{
+      min-height: 100px;
+    }
+    h1{
+      font-weight: 600;
+      font-size: 50px;;
+    }
+
+</style>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <title>Scrapper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<nav>
+    <div class="container nav-wrapper">
+        <a href="{% url 'home' %}" class="brand-logo">Codedaddies Scrapper</a>
+        <ul id ="nav-mobile" class="right">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+        </ul>
+    </div>
+</nav>
+<br>
+<div class="container">
+<h1 style="padding-top: 4cm;">What do you want to</h1>
+<h1>search for on this scrapper app?</h1>
+
+<form style="padding-top: 3cm;" action="{% url 'new_search' %}" method="post">{% csrf_token %}
+        <input type="text" name='search' placeholder="search">
+        <button class="btn waves-effect waves-light" type="submit" name="action">submit
+            <i class="material-icons right">send</i>
+        </button>
+</form>
+
+<div class="main">
+  {% block content %}
+
+  {% endblock content %}
+</div>
+</div>
+
+<!-- Footer -->
+<!-- <footer class="page-footer font-small teal pt-4">
+
+  <!-- Footer Text -->
+  <!-- <div class="container-fluid text-center text-md-left">
+    <!-- Grid row -->
+    <!-- <div class="row">
+
+      <!-- Grid column -->
+      <!-- <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <!-- <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
+        <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil
+          repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae
+          harum esse fugiat. Itaque, culpa?</p>
+
+      <!-- </div>
+      <!-- Grid column -->
+
+      <!-- <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <!-- <div class="col-md-6 mb-md-0 mb-3">
+
+        <!-- Content -->
+        <!-- <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
+        <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum
+          commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id
+          excepturi hic.</p>
+
+      <!-- </div>
+      <!-- Grid column -->
+
+    <!-- </div>
+    <!-- Grid row -->
+
+  <!-- </div>
+  <!-- Footer Text -->
+  <!-- Copyright -->
+
+  <div class="d-flex flex-row footer footer-copyright bg-white shadow-lg mt-4 align-items-center">
+      <p class="m-auto align-items:center;">© 2020 Copyright: Anish Bangotra</p>
+  </div>
+  <!-- Copyright -->
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Footer -->
+</body>
+</html>

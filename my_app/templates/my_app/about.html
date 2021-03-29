@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<br
+<strong><h1 class="center p-2"><u class="light mt-auto">About us</u></h1></strong>
+<br>
+<br>
+<div  class="row">
+    <div class="col s4">
+        <!--Promo Content 1 goes here---->
+        <div class="center">
+            <i class="small material-icons ic" style="color: #EE6E73">flash_on</i>
+            <p>Fast craiglist web scrapper</p>
+            <p class="light center">Scrape away right here with a beautiful GUI.</p>
+        </div>
+    </div>
+    <div class="col s4">
+        <div class="center">
+            <i class="small material-icons ic" style="color:orange">camera</i>
+            <p>Filter your searches</p>
+            <p class="light center">We built in functionality to filter based on pricing</p>
+        </div>
+    </div>
+    <div class="col s4">
+        <div class="center">
+            <i class="small material-icons ic" style="color:blue">chrome_reader_mode</i>
+            <p>A much sexier front-end to Craiglist</p>
+            <p class="light center">We built this with passion.</p>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<h5 style="text-align:center; padding-top: 2cm;">Craigslist (stylized as craigslist) is an American classified advertisements website with sections devoted to jobs, housing, for sale, items wanted, services, community service, gigs, résumés, and discussion forums.
+
+Craig Newmark began the service in 1995 as an email distribution list to friends, featuring local events in the San Francisco Bay Area. It became a web-based service in 1996 and expanded into other classified categories. It started expanding to other U.S. and Canadian cities in 2000, and now covers 70 countries.
+
+In March 2008, Spanish, French, Italian, German, and Portuguese became the first non-English languages Craigslist supported. As of August 9, 2012, over 700 cities and areas in 70 countries had Craigslist sites. Some Craigslist sites cover large regions instead of individual metropolitan areas—for example, the U.S. states of Delaware and Wyoming, the Colorado Western Slope, the California Gold Country, and the Upper Peninsula of Michigan are among the locations with their own Craigslist sites.Craigslist sites for some large cities, such as Los Angeles, also include the ability for the user to focus on a specific area of a city (such as central Los Angeles).</h5>
+<br>
+
+<p><p style="padding-top:1cm;">Craigslist is a big believer in open source software, and relies on Linux, MySQL, Perl, Apache, Sphinx, Redis, Haraka, and many others.
+
+craigslist (CL) has released the following open source projects:</p>
+
+<ul><strong>CL blob service</strong> - a simple HTTP-based, multi-master storage service designed for scale-out and multi-datacenter deployments:
+    <br>
+    <li style="padding-left:1cm;">-multi-master architecture with no single point of failure</li>
+    <li style="padding-left:1cm;">-scales well for both read and write intensive workloads</li>
+    <li style="padding-left:1cm;">-tracks TTLs for automatic expiration and purging of blobs</li>
+    <li style="padding-left:1cm;">-designed for both local and multiple data center replication</li>
+    <li style="padding-left:1cm;">-pluggable index and storage interface (uses SQLite for index and filesystem for storage by default)</li>
+</ul>
+<ul><strong>CL image service</strong> - large scale image resizing and processing HTTP service:
+  <br>
+    <li style="padding-left:1cm;">-flexible API to choose any quality, size, and center-cropping</li>
+    <li style="padding-left:1cm;">-automatically handles orientation operations from EXIF data</li>
+    <li style="padding-left:1cm;">-stores resized images in the blob service (could use other stores)</li>
+</ul>
+
+<ul><strong>memcache cluster proxy (MCP)</strong> - a high-performance modular clustering HTTP reverse proxy:
+    <br>
+    <li style="padding-left:1cm;">-high-performance event-driven daemon</li>
+    <li style="padding-left:1cm;">-flexible configuration, easily extensible framework</li>
+    <li style="padding-left:1cm;">-uses standard memcached memory store for caching</li>
+    <li style="padding-left:1cm;">-supports PCRE and rule-based traffic routing by URL, headers, and more</li>
+    <li style="padding-left:1cm;">-tracks health of origin servers, routes around failures</li>
+    <li style="padding-left:1cm;">-provides configurable URL redirects, rewrites, and real-time header transformations</li>
+</ul></p>
+
+
+
+{% endblock content %}
